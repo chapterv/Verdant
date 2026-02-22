@@ -21,10 +21,6 @@
 !src/
 !src/**
 
-# Keep one roadmap doc for purple planning
-!docs/
-!docs/PURPLE_OPTIMIZATION_ROADMAP_ZH.md
-
 # Never track compiled/cache artifacts
 **/__pycache__/
 *.pyc
