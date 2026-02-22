@@ -6,3 +6,11 @@
     buildCommand: python -m pip install -r requirements.txt
     startCommand: python run.py --config config/config.yaml --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
+
+  - type: web
+    name: web-agent-purple
+    env: python
+    plan: free
+    buildCommand: python -m pip install -r requirements.txt
+    startCommand: python run_purple.py --config config/purple_config.yaml --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health

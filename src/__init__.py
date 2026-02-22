@@ -43,6 +43,8 @@ from .webarena_benchmark import (
     create_ecommerce_task_set
 )
 from .service import create_app
+from .purple_agent import PurpleAgent, PurpleTask, PurpleTaskResult, VerificationResult
+from .purple_service import create_purple_app
 from .benchmark_quality import analyze_tasks, analyze_and_save, save_report
 
 __all__ = [
@@ -80,6 +82,12 @@ __all__ = [
     "create_ecommerce_task_set",
     # Service
     "create_app",
+    "create_purple_app",
+    # Purple agent
+    "PurpleAgent",
+    "PurpleTask",
+    "PurpleTaskResult",
+    "VerificationResult",
     # Quality analysis
     "analyze_tasks",
     "analyze_and_save",

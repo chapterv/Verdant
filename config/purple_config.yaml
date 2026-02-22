@@ -1,0 +1,23 @@
+# Verdant Purple Agent Configuration
+
+agent:
+  name: "Verdant Purple"
+  version: "1.0.0"
+  description: "Deterministic Purple assessee agent with dual-pass verification"
+
+service:
+  host: "0.0.0.0"
+  port: 8001
+
+execution:
+  seed: "verdant-purple-v1"
+  step_delay_seconds: 0.15
+  max_steps: 4
+
+verification:
+  require_expected_keywords: true
+  require_structural_fields: true
+
+llm:
+  enabled: false
+  mode: "off"

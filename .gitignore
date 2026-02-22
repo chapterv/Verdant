@@ -11,6 +11,7 @@
 !Dockerfile
 !requirements.txt
 !run.py
+!run_purple.py
 !run.sh
 !run.ps1
 
@@ -19,6 +20,10 @@
 !config/**
 !src/
 !src/**
+
+# Keep one roadmap doc for purple planning
+!docs/
+!docs/PURPLE_OPTIMIZATION_ROADMAP_ZH.md
 
 # Never track compiled/cache artifacts
 **/__pycache__/
