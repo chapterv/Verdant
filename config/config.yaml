@@ -1,0 +1,69 @@
+# Web Agent Green Agent Configuration
+
+# Agent Configuration
+agent:
+  name: "Web Agent Evaluator"
+  version: "1.0.0"
+  description: "Green Agent for evaluating Web browsing agents"
+
+# A2A Protocol Configuration
+a2a:
+  protocol_version: "1.0"
+  task_manager:
+    max_retries: 3
+    retry_delay: 1.0
+    poll_interval: 1.5
+    task_retry_limit: 2
+    timeout: 300  # seconds
+
+# Environment Configuration
+environment:
+  type: "web_evaluation"
+  headless: true
+  browser: "chromium"
+  viewport:
+    width: 1280
+    height: 720
+  # Replace placeholder benchmark domains with actual environment endpoints.
+  # Example: "shopping.example.com": "webarena-shop.your-domain.com"
+  url_overrides: {}
+
+# Evaluation Configuration
+evaluation:
+  run_repeats: 2
+  max_concurrency: 2
+  metrics:
+    - name: "success_rate"
+      weight: 0.4
+    - name: "efficiency"
+      weight: 0.3
+    - name: "error_recovery"
+      weight: 0.3
+  
+  # Test scenarios
+  scenarios:
+    - id: "navigation"
+      description: "Navigate to specific webpage"
+    - id: "form_filling"
+      description: "Fill and submit forms"
+    - id: "extraction"
+      description: "Extract specific information"
+    - id: "interaction"
+      description: "Interact with web elements"
+
+# MCP Server Configuration (if needed)
+mcp:
+  enabled: false
+  server_url: ""
+  tools: []
+
+# Service / Controller Configuration
+service:
+  host: "0.0.0.0"
+  port: 8080
+  worker_name: "web-agent-green"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/agent.log"

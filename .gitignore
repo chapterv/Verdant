@@ -1,0 +1,26 @@
+﻿# Track only production Verdant files
+*
+
+# Keep repo controls
+!.gitignore
+!README.md
+!render.yaml
+
+# Runtime/deploy files
+!.dockerignore
+!Dockerfile
+!requirements.txt
+!run.py
+!run.sh
+!run.ps1
+
+# Core app
+!config/
+!config/**
+!src/
+!src/**
+
+# Never track compiled/cache artifacts
+**/__pycache__/
+*.pyc
+*.pyo

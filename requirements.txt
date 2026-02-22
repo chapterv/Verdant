@@ -1,0 +1,29 @@
+# Web Agent Green Agent Dependencies
+
+# Core
+pyyaml>=6.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+
+# For A2A Protocol
+aiohttp>=3.9.0
+websockets>=12.0
+
+# For MCP Protocol (optional)
+# mcp>=1.0.0
+
+# For Browser Automation (production)
+# playwright>=1.40.0
+# selenium>=4.15.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+
+# Optional: for logging enhancements
+loguru>=0.7.0
