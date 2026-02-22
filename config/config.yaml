@@ -25,13 +25,18 @@ environment:
     width: 1280
     height: 720
   # Replace placeholder benchmark domains with actual environment endpoints.
-  # Example: "shopping.example.com": "webarena-shop.your-domain.com"
-  url_overrides: {}
+  # Fill these values with real benchmark domains after deployment.
+  url_overrides:
+    shopping.example.com:
+    forum.example.com:
+    classifieds.example.com:
+    map.example.com:
+    wiki.example.com:
 
 # Evaluation Configuration
 evaluation:
-  run_repeats: 2
-  max_concurrency: 2
+  run_repeats: 1
+  max_concurrency: 1
   metrics:
     - name: "success_rate"
       weight: 0.4
